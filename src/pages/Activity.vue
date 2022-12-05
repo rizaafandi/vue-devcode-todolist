@@ -12,11 +12,12 @@
           data-cy="todo-title"
           class="capitalize font-bold lg:text-4xl text-2xl"
           v-text="isFetching ? 'Loading' : data?.title"
-          v-if="!EDIT_TITLE"
+          v-show="!EDIT_TITLE"
           @click="EDIT_TITLE = true"
           id="todo-title"
         ></h1>
         <input
+          data-cy="todo-title"
           v-if="EDIT_TITLE"
           type="text"
           class="p-3 mt-1 rounded-md shadow-sm border border-gray hover:bg-slate-100 focus:border focus:border-primary focus:border-opacity-50 text-sm"
