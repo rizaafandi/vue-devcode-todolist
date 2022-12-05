@@ -13,6 +13,7 @@
           class="capitalize font-bold lg:text-4xl text-2xl"
           v-text="isFetching ? 'Loading' : data?.title"
           @click="EDIT_TITLE = true"
+          v-if="!EDIT_TITLE"
           id="todo-title"
         ></h1>
         <input
@@ -165,6 +166,9 @@ onMounted(async () => {
     "click",
     () => {
       MODAL_INF.value = false;
+      if (EDIT_TITLE.value) {
+        executeEdit();
+      }
     },
     {
       capture: true,

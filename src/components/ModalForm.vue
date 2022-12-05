@@ -47,6 +47,7 @@
             >priority</span
           >
           <div
+            :data-cy="!dropdown ? 'modal-add-priority-dropdown' : ''"
             class="lg:w-2/6 w-2/4 p-2 rounded-md border border-gray flex flex-row justify-between items-center text-sm cursor-pointer"
             @click="dropdown = !dropdown"
             :class="dropdown ? 'bg-neutral-100' : ' '"
@@ -73,8 +74,8 @@
           <div class="w-full relative">
             <div
               data-cy="modal-add-priority-dropdown"
-              :class="dropdown ? 'absolute' : 'hidden'"
-              class="lg:w-2/6 w-2/4 bg-white rounded-md"
+              v-if="dropdown"
+              class="lg:w-2/6 w-2/4 bg-white rounded-md absolute"
             >
               <template v-for="(P, index) of PRIRITIES">
                 <div
