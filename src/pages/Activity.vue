@@ -12,7 +12,6 @@
           data-cy="todo-title"
           class="capitalize font-bold lg:text-4xl text-2xl"
           v-text="isFetching ? 'Loading' : data?.title"
-          v-show="!EDIT_TITLE"
           @click="EDIT_TITLE = true"
           id="todo-title"
         ></h1>
