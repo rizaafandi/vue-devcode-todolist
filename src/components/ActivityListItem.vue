@@ -11,7 +11,7 @@
             data-cy="todo-item-checkbox"
             type="checkbox"
             :checked="!item.is_active"
-            @change.self="$emit('close', item)"
+            @change="$emit('close', item)"
             class="cursor-pointer"
           />
           <span

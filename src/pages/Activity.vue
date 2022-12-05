@@ -45,7 +45,7 @@
         <Button
           data-cy="todo-add-button"
           icon
-          text="tambah"
+          text="Tambah"
           @click="MODAL_ADD_LIST = true"
         />
       </div>
@@ -90,7 +90,7 @@
   />
   <ModalForm
     :modal="MODAL_ADD_LIST"
-    :heading="MODAL_FORM.id ? 'edit list item' : 'tambah list item'"
+    :heading="MODAL_FORM.id ? 'Edit List Item' : 'Tambah List Item'"
     @close="
       MODAL_ADD_LIST = false;
       MODAL_FORM = {};

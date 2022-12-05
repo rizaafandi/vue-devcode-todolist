@@ -73,7 +73,6 @@
           <!-- dropdown -->
           <div class="w-full relative">
             <div
-              data-cy="modal-add-priority-dropdown"
               :class="dropdown ? 'absolute' : 'hidden'"
               class="lg:w-2/6 w-2/4 bg-white rounded-md"
             >
@@ -114,7 +113,6 @@
           data-cy="modal-add-save-button"
           text="Simpan"
           @click="$emit('confirm')"
-          :disabled="!title || !priority"
         />
       </div>
     </div>
@@ -170,7 +168,7 @@ const props = defineProps({
   },
   heading: {
     type: String,
-    default: "tambah list item",
+    default: "Tambah List Item",
   },
   title: {
     type: String,
@@ -180,7 +178,7 @@ const props = defineProps({
   priority: {
     type: String,
     required: true,
-    default: "",
+    default: "very-high",
   },
 });
 

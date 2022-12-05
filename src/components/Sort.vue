@@ -58,27 +58,27 @@ const SORTS = [
   {
     text: "Terbaru",
     component: SortLatest,
-    cy: "sort-latest",
+    cy: "sort-selection",
   },
   {
     text: "Terlama",
     component: SortOld,
-    cy: "sort-oldest",
+    cy: "sort-selection",
   },
   {
     text: "A-Z",
     component: SortAz,
-    cy: "sort-az",
+    cy: "sort-selection",
   },
   {
     text: "Z-A",
     component: SortZa,
-    cy: "sort-za",
+    cy: "sort-selection",
   },
   {
     text: "Belum Selesai",
     component: SortUndefined,
-    cy: "sort-unfinished",
+    cy: "sort-selection",
   },
 ];
 
