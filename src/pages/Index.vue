@@ -5,12 +5,12 @@
         data-cy="activity-title"
         class="capitalize font-bold lg:text-4xl text-2xl"
       >
-        activity
+        Activity
       </h1>
       <Button
         data-cy="activity-add-button"
         icon
-        text="tambah"
+        text="Tambah"
         @click="postData().then(async () => await getData())"
       />
     </div>
@@ -26,6 +26,7 @@
           @click="postData().then(async () => await getData())"
         />
         <ActivityList
+          data-cy="activity-item"
           v-else
           :data="data?.data"
           @delete.self="openModalDelete"
@@ -104,6 +105,20 @@ const executeDelete = async () => {
 onMounted(async () => {
   await getData();
 
-  document.body.addEventListener("click", () => (MODAL_INF.value = false));
+  document.body.addEventListener(
+    "click",
+    () => {
+      MODAL_INF.value = false;
+    },
+    {
+      // capture: true,
+    }
+  );
+
+  // document
+  //   .querySelector(".vue-universal-modal")
+  //   ?.addEventListener("click", () => {
+  //     MODAL_DEL.value = false;
+  //   });
 });
 </script>

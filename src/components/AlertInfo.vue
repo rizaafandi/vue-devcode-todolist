@@ -1,5 +1,9 @@
 <template>
-  <Modal :model-value="modal">
+  <div
+    class="fixed w-full h-full flex justify-center items-center z-50 top-0 bg-overlay"
+    v-show="modal"
+    @click.self="$emit('close')"
+  >
     <div
       data-cy="modal-information"
       class="bg-white rounded-xl lg:w-4/12 w-10/12"
@@ -12,7 +16,7 @@
         >
       </div>
     </div>
-  </Modal>
+  </div>
 </template>
 
 <script setup>

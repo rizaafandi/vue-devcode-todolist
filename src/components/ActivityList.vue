@@ -4,7 +4,7 @@
   >
     <template v-for="(item, index) in data" :key="index">
       <div
-        :data-cy="'activity-item-' + index"
+        :data-cy="'activity-item'"
         class="bg-white shadow-md hover:shadow-lg p-6 rounded-xl h-56 flex flex-col justify-between cursor-pointer"
         @click.self="router.push({ path: '/detail/' + item.id })"
       >

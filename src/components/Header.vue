@@ -7,7 +7,7 @@
       data-cy="header-title"
       class="uppercase font-bold text-white lg:text-2xl text-lg"
     >
-      to do list app
+      TO DO LIST APP
     </h1>
   </header>
 </template>
