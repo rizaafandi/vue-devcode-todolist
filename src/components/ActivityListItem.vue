@@ -41,11 +41,13 @@
           </button>
         </div>
         <button
-          data-cy="todo-item-delete-button"
-          @click="$emit('delete', item)"
           class="cursor-pointer hover:bg-gray rounded-full h-10 w-10 flex"
         >
-          <Delete class="m-auto" />
+          <Delete
+            data-cy="todo-item-delete-button"
+            @click="$emit('delete', item)"
+            class="m-auto"
+          />
         </button>
       </div>
     </template>
