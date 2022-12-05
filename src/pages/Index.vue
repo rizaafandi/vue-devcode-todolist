@@ -21,14 +21,14 @@
       <template v-else>
         <ActivityEmptyState
           data-cy="activity-empty-state"
-          v-if="!data || !data.data.length"
+          v-show="!data || !data.data.length"
           class="w-auto lg:w-4/6 m-auto"
           @click="postData().then(async () => await getData())"
         />
         <ActivityList
           data-cy="activity-item"
-          v-else
-          :data="data?.data"
+          v-show="data || data?.data?.length"
+          :data="data ? data.data : []"
           @delete.self="openModalDelete"
         />
       </template>
