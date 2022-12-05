@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-col w-full gap-3">
-    <template v-for="(item, index) in filteredData" :key="index">
+    <div v-for="(item, index) in filteredData" :key="index">
       <div
         :data-cy="'todo-item-' + index"
         class="bg-white shadow-md hover:shadow-lg p-5 rounded-xl flex flex-row justify-between cursor-pointer"
@@ -41,16 +41,14 @@
           </button>
         </div>
         <button
+          data-cy="todo-item-delete-button"
+          @click="$emit('delete', item)"
           class="cursor-pointer hover:bg-gray rounded-full h-10 w-10 flex"
         >
-          <Delete
-            data-cy="todo-item-delete-button"
-            @click="$emit('delete', item)"
-            class="m-auto"
-          />
+          <Delete class="m-auto" />
         </button>
       </div>
-    </template>
+    </div>
   </div>
 </template>
 

@@ -114,7 +114,7 @@
           data-cy="modal-add-save-button"
           text="Simpan"
           @click="$emit('confirm')"
-          :disabled="props.title == '' && props.priority == ''"
+          :disabled="props.title == '' || props.priority == ''"
         />
       </div>
     </div>
